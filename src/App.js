@@ -1,51 +1,15 @@
-//import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import UsernameShow from './features/Username/UsernameShow';
+import UsernameInput from './features/Username/UsernameInput';
+import UsernameDelete from './features/Username/UsernameDelete';
 
-//import Empleado from './MisComponentes/Empleado';
-//import EmpleadoJSON from './MisComponentes/EmpleadoJSON';
-
-import EmpleadosJSON from './MisComponentes/EmpleadosJSON';
-
-import { Component } from 'react';
-
-/*var userJSON={
-  nombre: "Oscar",
-  cargo: "Profe",
-  foto: logo
-};*/
-var usersJSON=[{
-  nombre: "Oscar",
-  cargo: "Profe",
-  foto: logo
-}];
-
-class App extends Component {
-  constructor(props){
-    super(props);
-    this.state={
-      /*user:{
-        nombre: "Oscar",
-        cargo: "Profe",
-        foto: logo
-      },
-      users:[{
-        nombre: "Oscar",
-        cargo: "Profe",
-        foto: logo
-      }]*/
-    }
-  }
-
-  render(){ 
-    return (
-      <div>
-        {/*<Empleado nombre='Ana' cargo='cego' foto={logo}/>
-        <EmpleadoJSON user={userJSON}/>*/}
-        <EmpleadosJSON users={usersJSON}/>
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div>
+        <UsernameInput></UsernameInput>
+        <UsernameShow></UsernameShow>
+        <UsernameDelete></UsernameDelete>
+    </div>
+  )
 }
 
 export default App;
